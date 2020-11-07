@@ -50,7 +50,7 @@ public class LoginFragment extends Fragment {
                 if(aBoolean!=null){
                     if(aBoolean){
                         NavDirections action =
-                                LoginFragmentDirections.actionLoginFragmentToHomeFragment(new User(fragmentLoginBinding.editTextEmail.getText().toString(),fragmentLoginBinding.editTextPassword.getText().toString()));
+                                LoginFragmentDirections.actionLoginFragmentToHomeFragment(loginViewModel.user);
                         Navigation.findNavController(view).navigate(action);
                         loginViewModel.onLoginNavigated();
                     }
