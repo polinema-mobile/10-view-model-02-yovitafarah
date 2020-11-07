@@ -12,15 +12,13 @@ import java.util.Objects;
 import id.putraprima.mvvmlogin.models.User;
 
 public class LoginViewModel extends ViewModel {
-    public ObservableField<String> mUsername = new ObservableField<>();
-    public ObservableField<String> mPassword = new ObservableField<>();
     private User user = new User();
     private MutableLiveData<Boolean> isLoggedIn = new MutableLiveData<>();
 
 
-    public void validateLogin(){
+    public void validateLogin(String email,String password){
         this.
-        isLoggedIn.setValue(this.user.checkLogin(Objects.requireNonNull(mUsername.get()), mPassword.get()));
+        isLoggedIn.setValue(this.user.checkLogin(email,password));
     }
 
     public LiveData<Boolean> isLoggedIn(){
