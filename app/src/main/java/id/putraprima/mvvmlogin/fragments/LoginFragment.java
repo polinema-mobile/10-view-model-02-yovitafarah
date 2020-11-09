@@ -45,7 +45,7 @@ public class LoginFragment extends Fragment {
         // Inflate the layout for this fragment
         FragmentLoginBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false);
         binding.setLifecycleOwner(this);
-        LoginViewModelFactory loginViewModelFactory = new LoginViewModelFactory(new LoggedIn("nuruslaily@gmail.com", "nurus123"));
+        LoginViewModelFactory loginViewModelFactory = new LoginViewModelFactory(new LoggedIn("yovitafarahdela@gmail.com", "yovita19"));
         loginViewModel = new ViewModelProvider(this, loginViewModelFactory).get(LoginViewModel.class);
         binding.setLoginViewModel(loginViewModel);
         return binding.getRoot();
